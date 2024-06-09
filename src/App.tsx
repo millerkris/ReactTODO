@@ -16,9 +16,9 @@ type Item = {
 
 function App() {
     const [items, setItems] = useState<Item[]>([
-        { id: uuidv4(), text: 'Элемент 1', date: '11.1.2024', isChecked: false },
-        { id: uuidv4(), text: 'Элемент 2', date: '10.1.2024', isChecked: false },
-        { id: uuidv4(), text: 'Элемент 3', date: '9.1.2024', isChecked: false }
+        { id: "1", text: 'Элемент 1', date: '11.1.2024', isChecked: false },
+        { id: "2", text: 'Элемент 2', date: '10.1.2024', isChecked: false },
+        { id: "3", text: 'Элемент 3', date: '9.1.2024', isChecked: false }
     ]);
 
     const [filteredItems, setFilteredItems] = useState<Item[]>([]);
@@ -98,7 +98,7 @@ function App() {
         } else if (status === 'undone') {
             filteredItems = items.filter((item) => !item.isChecked);
         } else {
-            filteredItems = items; // Показать все элементы
+            filteredItems = items; 
         }
     
         setFilteredItems(filteredItems);

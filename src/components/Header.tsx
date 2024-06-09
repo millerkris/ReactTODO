@@ -14,7 +14,7 @@ const Header: React.FC<HeaderProps> = ({ onAddItem, onClearList }) => {
 
     return (
         <div className="header">
-            <h2>To Do List</h2>
+            <h2 >To Do List</h2>
             <input type="text" id="myInput" placeholder="Название..." autoComplete="off" />
             <button onClick={handleAddItem}>Создать</button>
             <button onClick={onClearList}>Очистить все</button>

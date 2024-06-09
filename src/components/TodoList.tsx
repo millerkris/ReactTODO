@@ -16,12 +16,18 @@ const TodoList: React.FC<TodoListProps> = ({ items, ToggleChecked, DeleteListIte
     return (
         <div>
             <ul>
-                {items.map(item => (
-                    <ListItem key={item.id} item={item} toggleChecked={ToggleChecked} deleteListItem={DeleteListItem} />
-                ))}
+            {items.map(item => (
+    <ListItem 
+        key={item.id} 
+        item={item} 
+        toggleChecked={() => ToggleChecked(item.id)} 
+        deleteListItem={() => DeleteListItem(item.id)} 
+    />
+))}
             </ul>
         </div>
     );
+    
 };
 
 export default TodoList;
